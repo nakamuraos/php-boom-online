@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  boom:
+    container_name: boom
+    image: boom
+    pull_policy: never
+    build: .
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 8080:80
